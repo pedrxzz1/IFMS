@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Rodízio de Carona</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 300px;
+            padding: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1>Sistema de Rodízio de Carona</h1>
+
+    <h2>Cadastro de Pessoas</h2>
+
+    <form id="formPessoa" action="cadastroCarro.php" method="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" required>
+
+    <label>Idade:</label>
+    <input type="number" name="idade" required>
+
+    <label>CPF:</label>
+    <input type="text" name="cpf" required>
+
+    <label>Turno que estuda:</label>
+    <select name="turno" required>
+        <option value="manhã">Manhã</option>
+        <option value="tarde">Tarde</option>
+        <option value="noite">Noite</option>
+    </select>
+
+    <label>Descrição:</label>
+    <textarea name="descricao" rows="3"></textarea>
+
+    <button type="submit">Cadastrar Pessoa</button>
+</form>
+
+<h2>Cadastro de Carros</h2>
+
+<form id="formCarro" action="cadastroCarro.php" method="POST">
+    <label>Marca:</label>
+    <input type="text" name="marca" required>
+
+    <label>Modelo:</label>
+    <input type="text" name="modelo" required>
+
+    <label>Ano:</label>
+    <input type="number" name="ano" required>
+
+    <label>Cor:</label>
+    <input type="text" name="cor" required>
+
+    <label>Quantidade de lugares:</label>
+    <input type="number" name="lugares" required>
+
+    <label>Consumo de combustível (km/l):</label>
+    <input type="number" name="consumo" step="0.1" required>
+
+    <button type="submit">Cadastrar Carro</button>
+</form>
+
+<h2>Lista de Pessoas</h2>
+<table id="tabelaPessoas">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>CPF</th>
+            <th>Turno</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<h2>Lista de Carros</h2>
+
+<table id="tabelaCarros">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Cor</th>
+            <th>Lugares</th>
+            <th>Consumo</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+</body>
+</html>
