@@ -6,12 +6,15 @@ __version__ = "x.x.x"
 __author__ = "Pedro Henrique"
 __license__ = "unlicense"
 
-name = input("Qual e o seu nome? ")
+home = float(input("Diga o valor da casa?: "))
 
-if name == "Pedro":
-    print("Seu nome e INCRIVEL!!!")
-elif name == "Gustavo" or name == "Maria":
-    print("Seu nome e bem popular no Brasil. ")
+salario = float(input("Diga quanto voce recebe?: "))
+
+financiamento =int(input("Quantos anos de financiamento? "))
+
+prestacao = home / (financiamento * 12)
+
+if prestacao > 1/3*salario:
+    print("finaciamento negat")
 else:
-    print("Que bosta. ")
-
+    print("Parabens, APROVED")
